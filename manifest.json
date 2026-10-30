@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Omni-Ask",
+  "version": "1.0.0",
+  "description": "全提问：一键把问题同时分发到当前浏览器已打开的多个 AI 聊天页面（DeepSeek、豆包、Kimi、ChatGPT、Claude、Gemini、通义千问等）。",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "*://*.deepseek.com/*",
+    "*://*.doubao.com/*",
+    "*://*.kimi.com/*",
+    "*://*.moonshot.cn/*",
+    "*://*.chatgpt.com/*",
+    "*://*.openai.com/*",
+    "*://claude.ai/*",
+    "*://gemini.google.com/*",
+    "*://*.aliyun.com/*",
+    "*://yiyan.baidu.com/*",
+    "*://*.tencent.com/*",
+    "*://*.chatglm.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Omni-Ask 全提问"
+  }
+}
